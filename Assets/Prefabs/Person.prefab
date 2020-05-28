@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 7386845967155067604}
   - component: {fileID: 7386845967155067611}
   - component: {fileID: 7386845967155067610}
-  - component: {fileID: 7386845967155067609}
+  - component: {fileID: 258069435}
   m_Layer: 0
   m_Name: Person
-  m_TagString: Untagged
+  m_TagString: Person
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,7 +28,7 @@ Transform:
   m_GameObject: {fileID: 7386845967155067608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.04, y: -5.3, z: 0}
-  m_LocalScale: {x: 5.41158, y: 5.41158, z: 5.41158}
+  m_LocalScale: {x: 0.100719646, y: 0.100719646, z: 0.100719646}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -72,12 +72,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 66d135bf4d2a743e7843fd04e9eba3af, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 0.2, y: 0.2}
+  m_Size: {x: 6.4, y: 6.4}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -96,10 +96,10 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.00071469444}
+  m_Offset: {x: 0, y: -0.20748428}
   serializedVersion: 2
-  m_Radius: 0.08785032
---- !u!114 &7386845967155067609
+  m_Radius: 4.3586297
+--- !u!114 &258069435
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,7 +108,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7386845967155067608}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ace9816c7c3414dd188e9c482ffa365b, type: 3}
+  m_Script: {fileID: 11500000, guid: 64643fc57d8d04e4391e9150db3b977b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  st: {fileID: 0}
+  sprites:
+  - {fileID: 21300000, guid: 66d135bf4d2a743e7843fd04e9eba3af, type: 3}
+  - {fileID: 21300000, guid: d562c547037bd48a7ad19e73156583ae, type: 3}
+  - {fileID: 21300000, guid: 8a3a2bc98ad934aaf9ab941d433a4e5a, type: 3}
+  - {fileID: 21300000, guid: 7401de366a845407fa25f821e3533bb9, type: 3}
+  - {fileID: 21300000, guid: 557373cf9a89b46e2b3c88fa96cac1aa, type: 3}
+  - {fileID: 21300000, guid: e07b13bc610734dbc82590396ece6850, type: 3}

@@ -6,7 +6,7 @@ public class SpacemanMovement : MonoBehaviour
 {
     
     private const float INITIAL_SPEED = 1f;
-    private const float SPEED_INCREASE = 0.025f;
+    private const float SPEED_INCREASE = 0.02f;
     private const float SPEED_DEBUFF = 0.2f;
 
     private Vector3 CLOCKWISE = new Vector3(0f, 0f, -2f);
