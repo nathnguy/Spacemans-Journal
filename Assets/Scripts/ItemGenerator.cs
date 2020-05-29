@@ -59,7 +59,7 @@ public class ItemGenerator : MonoBehaviour
     void CheckOutOfView() {
         GameObject[] gameObjs = FindObjectsOfType<GameObject>();
         foreach (GameObject obj in gameObjs) {
-            if (obj.transform.position.y < spaceman.transform.position.y - (Camera.main.orthographicSize * 2) ||
+            if (obj.transform.position.y < spaceman.transform.position.y - (Camera.main.orthographicSize * 3) ||
                 obj.transform.position.x < transform.position.x - (width * 4) ||
                 obj.transform.position.x > transform.position.x + (width * 4)) {
                 Destroy(obj);

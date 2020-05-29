@@ -21,6 +21,9 @@ public class SpacemanMovement : MonoBehaviour
 
     // increases when collision occurs
     public float speedMultiplier;
+
+    // sound
+    private AudioManager am;
     
 
     // Start is called before the first frame update
@@ -30,6 +33,7 @@ public class SpacemanMovement : MonoBehaviour
         speedMultiplier = 1f;
 
         rotation = CLOCKWISE;
+        am = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -46,6 +50,7 @@ public class SpacemanMovement : MonoBehaviour
     // increases speedMultiplier and changes velocity to the vector perpendicular
     // to the tangent line of the point of collision
     void OnCollisionEnter2D(Collision2D collision) {
+        am.Play("Bounce");
         ContactPoint2D contact = collision.contacts[0];
 
         // make sure velocity always has same magnitude
