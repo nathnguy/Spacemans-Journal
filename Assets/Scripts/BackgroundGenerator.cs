@@ -36,7 +36,7 @@ public class BackgroundGenerator : MonoBehaviour
 
     void GenerateBackground() {
         if (transform.position.y >= nextGenPos) {
-            Instantiate(background, transform.position, Quaternion.identity);
+            Instantiate(background, new Vector3(0f, nextGenPos, 0f), Quaternion.identity);
             nextGenPos += BACKGROUND_HEIGHT;
         }
     }

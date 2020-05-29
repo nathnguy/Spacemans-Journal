@@ -22,6 +22,8 @@ public class SpacemanMovement : MonoBehaviour
     // increases when collision occurs
     public float speedMultiplier;
 
+    private Animator animation;
+
     // sound
     private AudioManager am;
     
@@ -34,12 +36,14 @@ public class SpacemanMovement : MonoBehaviour
 
         rotation = CLOCKWISE;
         am = FindObjectOfType<AudioManager>();
+        animation = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        float animationSpeed = speedMultiplier > 2f ? 2f : speedMultiplier;
+        animation.SetFloat("speedMultiplier", animationSpeed);
     }
 
     void FixedUpdate() {
