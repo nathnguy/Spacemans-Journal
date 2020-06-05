@@ -1,9 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+
 
 public class TriggerCheck : MonoBehaviour
 {
+    public GameObject resultTitle;
 
     public GameObject st;
     private ScoreTracker increaseRescued;
@@ -25,6 +28,9 @@ public class TriggerCheck : MonoBehaviour
         } else if (other.CompareTag("Slow")) {
             am.Play("Slow");
             sm.SpeedDebuff();
+        } else if (other.CompareTag("Asteroid")) {
+            resultTitle.GetComponent<Text>().text = "Hit by an Asteroid...";
+            GameObject.FindWithTag("Endgame").GetComponent<EndGame>().ShowResults();
         }
         Destroy(other.gameObject);
     }

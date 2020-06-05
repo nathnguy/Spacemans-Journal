@@ -9,6 +9,8 @@ TagManager:
   - Person
   - Slow
   - Asteroid
+  - Endgame
+  - ResultTitle
   layers:
   - Default
   - TransparentFX

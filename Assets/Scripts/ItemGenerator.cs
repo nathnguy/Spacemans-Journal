@@ -15,6 +15,7 @@ public class ItemGenerator : MonoBehaviour
     private const float P_PERSON = 0.9f;
     private const float P_SLOW = 0.95f;
 
+    private const float INITIAL_ASTEROID_PROB = 0.01f;
     private const float MAX_ASTEROID_PROB = 0.32f;
     private const float ASTEROID_PROB_INCREASE = 2f;
 
@@ -35,7 +36,7 @@ public class ItemGenerator : MonoBehaviour
         // calc width of screen in units
         width = ((float)Screen.width / Screen.height) * (Camera.main.orthographicSize);
 
-        probAsteroid = 0.01f;
+        probAsteroid = INITIAL_ASTEROID_PROB;
 
         GenerateItems();
         UpdateLocation();
