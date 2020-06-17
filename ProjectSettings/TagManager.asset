@@ -11,6 +11,7 @@ TagManager:
   - Asteroid
   - Endgame
   - ResultTitle
+  - Audio
   layers:
   - Default
   - TransparentFX

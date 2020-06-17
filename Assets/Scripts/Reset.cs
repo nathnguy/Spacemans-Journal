@@ -8,12 +8,11 @@ public class Reset : MonoBehaviour
 {
     private int currentScene;
 
-    void Start() {
+    void Awake() {
         currentScene = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void ResetGame() {
-        Debug.Log("Reseting Game");
         SceneManager.LoadScene(currentScene);
     }
 }

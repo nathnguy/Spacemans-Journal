@@ -5,7 +5,7 @@ using UnityEngine;
 public class BackgroundGenerator : MonoBehaviour
 {
 
-    private const float BACKGROUND_HEIGHT = 11.49f;
+    private const float BACKGROUND_HEIGHT = 11.42f;
 
     public GameObject background;
 

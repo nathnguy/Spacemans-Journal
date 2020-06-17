@@ -6,12 +6,15 @@ using UnityEngine.UI;
 public class EndGame : MonoBehaviour
 {
 
-    private const float CUSHION = 1.5f;
+    private const float CUSHION = 1f;
+    private const int RESCUED_MULTIPLIER = 25;
+    private const int TRAVELED_MULTIPLIER = 15;
 
 
     public GameObject resultsScreen;
     public GameObject score;
     public GameObject rescued;
+    public GameObject distanceTraveled;
 
     private GameObject spaceman;
     private float screenHeight;
@@ -49,8 +52,22 @@ public class EndGame : MonoBehaviour
     public void ShowResults() {
         spaceman.SetActive(false);
         score.SetActive(false);
-        rescued.GetComponent<Text>().text = score.GetComponent<Text>().text;
+        distanceTraveled.SetActive(false);
+
+        ScoreTracker scoreInfo = score.GetComponent<ScoreTracker>();
+        int totalScore = scoreInfo.NumRescued * RESCUED_MULTIPLIER + scoreInfo.DistanceTraveled * TRAVELED_MULTIPLIER;
+        Text scoreText = rescued.GetComponent<Text>();
+        string scoreStr = "Rescued: " + scoreInfo.NumRescued + "\nTraveled: " + scoreInfo.DistanceTraveled + "\nScore: ";
 
         resultsScreen.SetActive(true);
+        StartCoroutine(CalcScore(totalScore, scoreText, scoreStr));
+    }
+
+    IEnumerator CalcScore(int score, Text scoreText, string scoreStr) {
+        for (int i = 0; i <= score; i+=125) {
+            scoreText.text = scoreStr + i;
+            yield return null;
+        }
+        scoreText.text = scoreStr + score;
     }
 }

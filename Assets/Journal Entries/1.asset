@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
+  m_Name: 1
+  m_EditorClassIdentifier: 
+  id: 1
+  date: ' June 14, 2376'
+  entry: "It\u2019s hard to picture now, looking at the barren wasteland outside
+    our living pods, but I still faintly remember the green pastures of my childhood.
+    They say we don\u2019t have much time left here. I find it hard to leave, yet
+    I think that\u2019s my nostalgia. "

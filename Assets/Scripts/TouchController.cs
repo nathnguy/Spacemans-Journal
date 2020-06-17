@@ -27,7 +27,7 @@ public class TouchController : MonoBehaviour
     }
 
     void CheckTouch() {
-        if (Input.touchCount == 1) {
+        if (Input.touchCount >= 1) {
             Touch touch = Input.GetTouch(0);
             Vector2 touchPos =  Camera.main.ScreenToWorldPoint(touch.position);
             transform.position = new Vector3(touchPos.x, touchPos.y, 0f);

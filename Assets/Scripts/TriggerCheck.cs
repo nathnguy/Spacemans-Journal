@@ -9,9 +9,11 @@ public class TriggerCheck : MonoBehaviour
     public GameObject resultTitle;
 
     public GameObject st;
+
     private ScoreTracker increaseRescued;
     private SpacemanMovement sm;
     private AudioManager am;
+
 
     // Start is called before the first frame update
     void Start()
