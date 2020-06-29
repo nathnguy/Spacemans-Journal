@@ -14,7 +14,20 @@ public class Sound
 
     public bool loop;
 
+    public bool isMusic;
+    private bool isPlaying;
+
     [HideInInspector]
     public AudioSource source; 
+
+    public bool IsPlaying {
+        get {
+            return isPlaying;
+        }
+
+        set {
+            isPlaying = value;
+        }
+    }
 
 }

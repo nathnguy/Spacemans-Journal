@@ -57,7 +57,7 @@ public class EndGame : MonoBehaviour
         ScoreTracker scoreInfo = score.GetComponent<ScoreTracker>();
         int totalScore = scoreInfo.NumRescued * RESCUED_MULTIPLIER + scoreInfo.DistanceTraveled * TRAVELED_MULTIPLIER;
         Text scoreText = rescued.GetComponent<Text>();
-        string scoreStr = "Rescued: " + scoreInfo.NumRescued + "\nTraveled: " + scoreInfo.DistanceTraveled + "\nScore: ";
+        string scoreStr = "Rescued: " + scoreInfo.NumRescued + "\nTraveled: " + scoreInfo.DistanceTraveled + " m" + "\nScore: ";
 
         resultsScreen.SetActive(true);
         StartCoroutine(CalcScore(totalScore, scoreText, scoreStr));

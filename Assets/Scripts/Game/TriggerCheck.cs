@@ -27,10 +27,13 @@ public class TriggerCheck : MonoBehaviour
         if (other.CompareTag("Person")) {
             am.Play("Collect");
             increaseRescued.IncreaseRescued();
+        } else if (other.CompareTag("Chip")) {
+            am.Play("Collect");
         } else if (other.CompareTag("Slow")) {
             am.Play("Slow");
             sm.SpeedDebuff();
         } else if (other.CompareTag("Asteroid")) {
+            am.Play("Explosion");
             resultTitle.GetComponent<Text>().text = "Hit by an Asteroid...";
             GameObject.FindWithTag("Endgame").GetComponent<EndGame>().ShowResults();
         }

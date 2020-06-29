@@ -12,6 +12,13 @@ TagManager:
   - Endgame
   - ResultTitle
   - Audio
+  - BoundSide
+  - BoundTopBot
+  - Chip
+  - EntryView
+  - SelectView
+  - EntryText
+  - EntryDate
   layers:
   - Default
   - TransparentFX

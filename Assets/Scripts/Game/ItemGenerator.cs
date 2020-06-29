@@ -15,6 +15,8 @@ public class ItemGenerator : MonoBehaviour
     private const float P_PERSON = 0.9f;
     private const float P_SLOW = 0.95f;
 
+    private const float CHIP_DISTANCE = 50f;
+
     private const float INITIAL_ASTEROID_PROB = 0.01f;
     private const float MAX_ASTEROID_PROB = 0.32f;
     private const float ASTEROID_PROB_INCREASE = 2f;
@@ -30,6 +32,8 @@ public class ItemGenerator : MonoBehaviour
 
     public float nextGenerationPos;
 
+    private float startPos;
+
     // Start is called before the first frame update
     void Start()
     {    
@@ -41,6 +45,8 @@ public class ItemGenerator : MonoBehaviour
         GenerateItems();
         UpdateLocation();
         nextGenerationPos = transform.position.y + DISTANCE_TO_CHANGE;
+
+        startPos = transform.position.y;
     }
 
     // Update is called once per frame
@@ -53,7 +59,7 @@ public class ItemGenerator : MonoBehaviour
             nextGenerationPos += DISTANCE_TO_CHANGE;
         }
 
-        CheckOutOfView(); 
+        CheckOutOfView();
     }
 
     // destroys game objects that are passed by the camera
@@ -79,7 +85,16 @@ public class ItemGenerator : MonoBehaviour
         Vector3 pos = transform.position;
         float separation = DISTANCE_TO_CHANGE / numItems;
         for (int i = 0; i < numItems; i++) {
-            GameObject item = GetRandomItem();
+            GameObject item;
+
+            // check if a chip should be placed
+            if ((transform.position.y - startPos >= CHIP_DISTANCE) && i == 0) {
+                item = items[3];
+                startPos = transform.position.y;
+            } else {
+                item = GetRandomItem();
+            }
+
             if (item != null) {
                 float itemY = pos.y + (separation * i);
                 float itemX= Random.Range(pos.x - width, pos.x + width);
@@ -117,6 +132,7 @@ public class ItemGenerator : MonoBehaviour
         } else if (num < P_SLOW) {
             return items[2];
         }
+        
         return null;
     }
 }

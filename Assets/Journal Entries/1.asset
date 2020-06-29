@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
   m_Name: 1
   m_EditorClassIdentifier: 
-  id: 1
+  id: 0
   date: ' June 14, 2376'
   entry: "It\u2019s hard to picture now, looking at the barren wasteland outside
     our living pods, but I still faintly remember the green pastures of my childhood.
