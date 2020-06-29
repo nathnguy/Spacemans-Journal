@@ -19,6 +19,7 @@ TagManager:
   - SelectView
   - EntryText
   - EntryDate
+  - DontDestroy
   layers:
   - Default
   - TransparentFX

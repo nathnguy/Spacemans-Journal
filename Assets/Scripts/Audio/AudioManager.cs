@@ -64,8 +64,8 @@ public class AudioManager : MonoBehaviour
     }
 
     public void EnableMusic() {
-        Play(currentSong);
         musicEnabled = true;
+        Play(currentSong);
     }
 
     public void ToggleSound() {

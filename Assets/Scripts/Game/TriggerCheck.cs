@@ -10,6 +10,10 @@ public class TriggerCheck : MonoBehaviour
 
     public GameObject st;
 
+    public string[] rescueMsgs;
+    public GameObject rescueMsg;
+    public GameObject renderCanvas;
+
     private ScoreTracker increaseRescued;
     private SpacemanMovement sm;
     private AudioManager am;
@@ -27,6 +31,7 @@ public class TriggerCheck : MonoBehaviour
         if (other.CompareTag("Person")) {
             am.Play("Collect");
             increaseRescued.IncreaseRescued();
+            DisplayRescueMsg(other.gameObject.transform.position);
         } else if (other.CompareTag("Chip")) {
             am.Play("Collect");
         } else if (other.CompareTag("Slow")) {
@@ -38,5 +43,13 @@ public class TriggerCheck : MonoBehaviour
             GameObject.FindWithTag("Endgame").GetComponent<EndGame>().ShowResults();
         }
         Destroy(other.gameObject);
+    }
+
+    void DisplayRescueMsg(Vector3 position) {
+        string msg = rescueMsgs[(int)Random.Range(0f, rescueMsgs.Length)];
+        GameObject newMsg = Instantiate(rescueMsg, position, Quaternion.identity);
+        newMsg.GetComponent<Text>().text = msg;
+        newMsg.transform.SetParent(renderCanvas.transform, false);
+        newMsg.tag = "Untagged";
     }
 }
