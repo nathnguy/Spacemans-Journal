@@ -206,6 +206,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896511948}
     m_Modifications:
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: entry
+      value: 
+      objectReference: {fileID: 11400000, guid: eeac2af1476f241ddbe80f0376dca8b2,
+        type: 2}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: entryView
+      value: 
+      objectReference: {fileID: 317936119}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: selectView
+      value: 
+      objectReference: {fileID: 1096893210}
     - target: {fileID: 8500950699995449295, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
         type: 3}
       propertyPath: entryView
@@ -1028,6 +1041,19 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896511948}
     m_Modifications:
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: entry
+      value: 
+      objectReference: {fileID: 11400000, guid: 28bc75e0cf3014905a04d3ff59eda6ce,
+        type: 2}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: entryView
+      value: 
+      objectReference: {fileID: 317936119}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: selectView
+      value: 
+      objectReference: {fileID: 1096893210}
     - target: {fileID: 8500950699995449295, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
         type: 3}
       propertyPath: entryView
@@ -1561,6 +1587,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: MusicPlayer
       objectReference: {fileID: 0}
+    - target: {fileID: 7040481715852634014, guid: 7490b1fde27b3442b9f853e2965ced52,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7040481715852634015, guid: 7490b1fde27b3442b9f853e2965ced52,
         type: 3}
       propertyPath: songName
@@ -1988,41 +2019,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1896511948}
     m_Modifications:
-    - target: {fileID: 8500950699995449295, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
       propertyPath: entryView
       value: 
       objectReference: {fileID: 317936119}
-    - target: {fileID: 8500950699995449295, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
       propertyPath: selectView
       value: 
       objectReference: {fileID: 1096893210}
-    - target: {fileID: 8500950700358252229, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
-      propertyPath: m_Interactable
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500950700358252229, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
-      propertyPath: m_Colors.m_DisabledColor.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500950700358252229, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
-      propertyPath: m_Colors.m_DisabledColor.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500950700358252229, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
-      propertyPath: m_Colors.m_DisabledColor.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8500950700358252229, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
-        type: 3}
-      propertyPath: m_Colors.m_DisabledColor.b
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8500950700358252230, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
         type: 3}
       propertyPath: m_LocalPosition.x

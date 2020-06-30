@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,6 @@ public class ItemGenerator : MonoBehaviour
 {
 
     private const float DISTANCE_TO_CHANGE = 20f;
-    private const float DISTANCE_BETWEEN_ITEMS = 2f;
     private const float MIN_ITEMS = 10f;
     private const float MAX_ITEMS = 15f;
 
@@ -66,7 +66,7 @@ public class ItemGenerator : MonoBehaviour
     void CheckOutOfView() {
         GameObject[] gameObjs = FindObjectsOfType<GameObject>();
         foreach (GameObject obj in gameObjs) {
-            if (!obj.CompareTag("Audio") && !obj.CompareTag("DontDestroy") &&
+            if (!obj.CompareTag("Audio") && !obj.CompareTag("DontDestroy") && !obj.CompareTag("GameData") &&
             obj.transform.position.y < spaceman.transform.position.y - (Camera.main.orthographicSize * 3) ||
                 obj.transform.position.x < transform.position.x - (width * 4) ||
                 obj.transform.position.x > transform.position.x + (width * 4)) {
@@ -82,14 +82,18 @@ public class ItemGenerator : MonoBehaviour
     }
 
     void GenerateItems() {
-        int numItems = (int)(Random.Range(MIN_ITEMS, MAX_ITEMS + 1f));
+        int numItems = (int)(UnityEngine.Random.Range(MIN_ITEMS, MAX_ITEMS + 1f));
         Vector3 pos = transform.position;
         float separation = DISTANCE_TO_CHANGE / numItems;
         for (int i = 0; i < numItems; i++) {
             GameObject item;
 
             // check if a chip should be placed
-            if ((transform.position.y - startPos >= CHIP_DISTANCE) && i == 0) {
+            GameData gameData = GameObject.FindWithTag("GameData").GetComponent<GameData>();
+            bool[] entriesFound = gameData.EntriesFound;
+            bool[] entriesNotFound = Array.FindAll(entriesFound, entry => !entry);
+
+            if (entriesNotFound.Length > 0 && (transform.position.y - startPos >= CHIP_DISTANCE) && i == 0) {
                 item = items[3];
                 startPos = transform.position.y;
             } else {
@@ -98,22 +102,22 @@ public class ItemGenerator : MonoBehaviour
 
             if (item != null) {
                 float itemY = pos.y + (separation * i);
-                float itemX= Random.Range(pos.x - width, pos.x + width);
+                float itemX= UnityEngine.Random.Range(pos.x - width, pos.x + width);
                 Instantiate(item, new Vector3(itemX, itemY, 0f), Quaternion.identity);
             }
         }
 
         // generate asteroids 
-        float chance = Random.Range(0f, 1f);
+        float chance = UnityEngine.Random.Range(0f, 1f);
         if (chance < probAsteroid) {
-            int numAsteroids = (int)Random.Range(1f, 3f);
+            int numAsteroids = (int)UnityEngine.Random.Range(1f, 3f);
             for (int i = 0; i < numAsteroids; i++) {
-                float leftOrRight = Random.Range(0f, 1f);
+                float leftOrRight = UnityEngine.Random.Range(0f, 1f);
                 float xPos = leftOrRight < 0.5f ? transform.position.x - (width + 3f) : transform.position.x + (width + 3f);
 
                 float yMin = transform.position.y - (Camera.main.orthographicSize * 3);
                 float yMax = transform.position.y;
-                float yPos = Random.Range(yMin, yMax);
+                float yPos = UnityEngine.Random.Range(yMin, yMax);
 
                 GameObject obj = Instantiate(asteroid, new Vector3(xPos, yPos, 0f), Quaternion.identity);
                 obj.SetActive(true);
@@ -125,7 +129,7 @@ public class ItemGenerator : MonoBehaviour
     }
 
     private GameObject GetRandomItem() {
-        float num = Random.Range(0f, 1f);
+        float num = UnityEngine.Random.Range(0f, 1f);
         if (num < P_BOUNCE) {
             return items[0];
         } else if (num < P_PERSON) {

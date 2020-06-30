@@ -20,6 +20,14 @@ public class ChangeView : MonoBehaviour
 
         entryText.GetComponent<Text>().text = entry.entry;
         entryDate.GetComponent<Text>().text = entry.date;
+
+        MarkAsRead();
+    }
+
+    private void MarkAsRead() {
+        GameData gameData = GameObject.FindWithTag("GameData").GetComponent<GameData>();
+        gameData.AddOpenedEntry(entry.id);
+        SaveSystem.SaveGame(gameData);
     }
 
     public void SelectView() {

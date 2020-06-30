@@ -16,6 +16,10 @@ public class EndGame : MonoBehaviour
     public GameObject rescued;
     public GameObject distanceTraveled;
 
+    // save data
+    public GameObject unreadEntries;
+    public GameObject highScoreTxt;
+
     private GameObject spaceman;
     private float screenHeight;
     private float screenWidth;
@@ -54,8 +58,18 @@ public class EndGame : MonoBehaviour
         score.SetActive(false);
         distanceTraveled.SetActive(false);
 
+        // load entry save data
+        unreadEntries.GetComponent<UnreadEntriesText>().UpdateUnread();
+
         ScoreTracker scoreInfo = score.GetComponent<ScoreTracker>();
         int totalScore = scoreInfo.NumRescued * RESCUED_MULTIPLIER + scoreInfo.DistanceTraveled * TRAVELED_MULTIPLIER;
+
+        // update high score
+        GameData gameData = GameObject.FindWithTag("GameData").GetComponent<GameData>();
+        gameData.UpdateHighScore(totalScore);
+        highScoreTxt.GetComponent<SetHighScore>().UpdateHighScore();
+        gameData.SaveGameData();
+
         Text scoreText = rescued.GetComponent<Text>();
         string scoreStr = "Rescued: " + scoreInfo.NumRescued + "\nTraveled: " + scoreInfo.DistanceTraveled + " m" + "\nScore: ";
 

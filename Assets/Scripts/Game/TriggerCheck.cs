@@ -14,6 +14,8 @@ public class TriggerCheck : MonoBehaviour
     public GameObject rescueMsg;
     public GameObject renderCanvas;
 
+    public GameObject deathPS;
+
     private ScoreTracker increaseRescued;
     private SpacemanMovement sm;
     private AudioManager am;
@@ -34,10 +36,15 @@ public class TriggerCheck : MonoBehaviour
             DisplayRescueMsg(other.gameObject.transform.position);
         } else if (other.CompareTag("Chip")) {
             am.Play("Collect");
+            GameData gameData = GameObject.FindWithTag("GameData").GetComponent<GameData>();
+            gameData.AddFoundEntry(other.gameObject.GetComponent<JournalChip>().ID);
         } else if (other.CompareTag("Slow")) {
             am.Play("Slow");
             sm.SpeedDebuff();
         } else if (other.CompareTag("Asteroid")) {
+            deathPS.transform.position = this.gameObject.transform.position;
+            deathPS.SetActive(true);
+            
             am.Play("Explosion");
             resultTitle.GetComponent<Text>().text = "Hit by an Asteroid...";
             GameObject.FindWithTag("Endgame").GetComponent<EndGame>().ShowResults();
