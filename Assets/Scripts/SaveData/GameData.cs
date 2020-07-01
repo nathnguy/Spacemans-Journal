@@ -5,7 +5,7 @@ using UnityEngine;
 public class GameData : MonoBehaviour
 {
 
-    private const int NUM_ENTRIES = 3;
+    private const int NUM_ENTRIES = 22;
 
     // journal data
     private bool[] entriesFound;

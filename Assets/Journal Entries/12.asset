@@ -10,11 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
-  m_Name: 1
+  m_Name: 12
   m_EditorClassIdentifier: 
-  id: 1
-  date: April 26, 2380
-  entry: "They\u2019ve been working on the New World for a while now. It\u2019s quite
-    massive, but I don\u2019t know how I\u2019ll feel when I look out of a window
-    into the void of space. There\u2019s something about having my whole world confined
-    by metal walls."
+  id: 12
+  date: 'January 12, 2398 '
+  entry: "You can feel the unease. There are only whispers in the living quarters.
+    We put our heads down in the presence of The Saviors\u2019 enforcement unit.
+    We lack faith."

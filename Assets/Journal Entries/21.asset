@@ -10,11 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
-  m_Name: 1
+  m_Name: 21
   m_EditorClassIdentifier: 
-  id: 1
-  date: April 26, 2380
-  entry: "They\u2019ve been working on the New World for a while now. It\u2019s quite
-    massive, but I don\u2019t know how I\u2019ll feel when I look out of a window
-    into the void of space. There\u2019s something about having my whole world confined
-    by metal walls."
+  id: 21
+  date: 'March 18, 2416 '
+  entry: 'I search for those that lost faith. They drifted off in search of a better
+    place, one in which they feel at home. I understand, and I search for them, hoping
+    to find them when there is a place we can all call home.
+
+'

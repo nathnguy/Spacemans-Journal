@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
-  m_Name: 1
+  m_Name: 17
   m_EditorClassIdentifier: 
-  id: 1
-  date: April 26, 2380
-  entry: "They\u2019ve been working on the New World for a while now. It\u2019s quite
-    massive, but I don\u2019t know how I\u2019ll feel when I look out of a window
-    into the void of space. There\u2019s something about having my whole world confined
-    by metal walls."
+  id: 17
+  date: 'October 16, 2407 '
+  entry: "It\u2019s painful to remember those lost or taken away. The Saviors tell
+    us that we are the lucky ones. To live and carry on the future of humanity is
+    a privilege, they say. Persistence and motivation are one in the same. I search
+    fruitlessly for my motivation.\n"

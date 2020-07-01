@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
+  m_Name: 9
+  m_EditorClassIdentifier: 
+  id: 9
+  date: 'May 23, 2390 '
+  entry: "Control feeds the ego. The Saviors oppress us in a promised path towards
+    salvation. They see the right state of man as order. Order is not equality, it
+    is oppression. We resist, protest, tell of unfair treatment, but The Saviors
+    \u2014 those with power, those who seek order \u2014 say it is we who are unruly.\n"

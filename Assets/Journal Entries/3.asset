@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 011437f967cab4991bdef0600fcb449a, type: 3}
-  m_Name: 1
+  m_Name: 3
   m_EditorClassIdentifier: 
-  id: 1
-  date: April 26, 2380
-  entry: "They\u2019ve been working on the New World for a while now. It\u2019s quite
-    massive, but I don\u2019t know how I\u2019ll feel when I look out of a window
-    into the void of space. There\u2019s something about having my whole world confined
-    by metal walls."
+  id: 3
+  date: March 5, 2383
+  entry: "Some things have changed for the better. We\u2019re less concerned with
+    profit and status. However, there\u2019s panic, we\u2019re just trying to survive.
+    You hear things about oxygen and food supply, but we\u2019ve learned to ignore
+    them. Nobody really knows anything."

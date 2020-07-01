@@ -20,6 +20,7 @@ TagManager:
   - EntryText
   - EntryDate
   - DontDestroy
+  - GameData
   layers:
   - Default
   - TransparentFX
