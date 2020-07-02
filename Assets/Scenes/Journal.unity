@@ -1055,7 +1055,7 @@ PrefabInstance:
     - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
       propertyPath: entry
       value: 
-      objectReference: {fileID: 11400000, guid: aa8924edef199477eb5b5ccba4df2ba1,
+      objectReference: {fileID: 11400000, guid: 0a08d7d2b84b448049e97e5a3058a4a2,
         type: 2}
     - target: {fileID: 8500950700358252230, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
         type: 3}
@@ -2356,7 +2356,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4695f4a248c194be8ac41ddb2c0b0722, type: 3}
-    m_FontSize: 95
+    m_FontSize: 94
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 0
@@ -5051,7 +5051,7 @@ PrefabInstance:
     - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
       propertyPath: entry
       value: 
-      objectReference: {fileID: 11400000, guid: eeac2af1476f241ddbe80f0376dca8b2,
+      objectReference: {fileID: 11400000, guid: aa8924edef199477eb5b5ccba4df2ba1,
         type: 2}
     - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
       propertyPath: entryView
@@ -5354,6 +5354,11 @@ PrefabInstance:
       propertyPath: selectView
       value: 
       objectReference: {fileID: 1096893210}
+    - target: {fileID: 1501931907, guid: a2862bc9ca3ea4721a071a44d8fd5b2b, type: 3}
+      propertyPath: entry
+      value: 
+      objectReference: {fileID: 11400000, guid: 54154a36da10842aea6447389dbcd9df,
+        type: 2}
     - target: {fileID: 8500950700358252230, guid: a2862bc9ca3ea4721a071a44d8fd5b2b,
         type: 3}
       propertyPath: m_LocalPosition.x

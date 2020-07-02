@@ -291,6 +291,12 @@ MonoBehaviour:
     loop: 0
     isMusic: 0
     source: {fileID: 0}
+  - name: Credits
+    clip: {fileID: 8300000, guid: 652f5d3bd31c14638ba625e56b1272c8, type: 3}
+    volume: 1
+    loop: 1
+    isMusic: 1
+    source: {fileID: 0}
 --- !u!4 &126319351
 Transform:
   m_ObjectHideFlags: 0
