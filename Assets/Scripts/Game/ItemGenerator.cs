@@ -8,7 +8,7 @@ public class ItemGenerator : MonoBehaviour
 
     private const float DISTANCE_TO_CHANGE = 20f;
     private const float MIN_ITEMS = 10f;
-    private const float MAX_ITEMS = 15f;
+    private const float MAX_ITEMS = 14f;
 
     // item probabilities
     private const float P_BOUNCE = 0.7f;
@@ -17,9 +17,9 @@ public class ItemGenerator : MonoBehaviour
 
     private const float CHIP_DISTANCE = 50f;
 
-    private const float INITIAL_ASTEROID_PROB = 0.01f;
-    private const float MAX_ASTEROID_PROB = 0.32f;
-    private const float ASTEROID_PROB_INCREASE = 2f;
+    private const float INITIAL_ASTEROID_PROB = 0.05f;
+    private const float MAX_ASTEROID_PROB = 0.5f;
+    private const float ASTEROID_PROB_INCREASE = 0.05f;
 
     // width of half the screen in units
     private float width;
@@ -107,24 +107,26 @@ public class ItemGenerator : MonoBehaviour
             }
         }
 
-        // generate asteroids 
+        generateAsteroid();
+    }
+
+    private void generateAsteroid() {
         float chance = UnityEngine.Random.Range(0f, 1f);
         if (chance < probAsteroid) {
             int numAsteroids = (int)UnityEngine.Random.Range(1f, 3f);
+            float yPos = transform.position.y;
+
             for (int i = 0; i < numAsteroids; i++) {
-                float leftOrRight = UnityEngine.Random.Range(0f, 1f);
-                float xPos = leftOrRight < 0.5f ? transform.position.x - (width + 3f) : transform.position.x + (width + 3f);
-
-                float yMin = transform.position.y - (Camera.main.orthographicSize * 3);
-                float yMax = transform.position.y;
-                float yPos = UnityEngine.Random.Range(yMin, yMax);
-
+                float xPos = UnityEngine.Random.Range(-width, width);
                 GameObject obj = Instantiate(asteroid, new Vector3(xPos, yPos, 0f), Quaternion.identity);
                 obj.SetActive(true);
+
+                yPos += width;
             }
         }
+
         if (probAsteroid < MAX_ASTEROID_PROB) {
-            probAsteroid *= ASTEROID_PROB_INCREASE;
+            probAsteroid += ASTEROID_PROB_INCREASE;
         }
     }
 

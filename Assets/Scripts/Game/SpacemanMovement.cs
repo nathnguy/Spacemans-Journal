@@ -6,6 +6,7 @@ public class SpacemanMovement : MonoBehaviour
 {
     
     private const float INITIAL_SPEED = 1f;
+    private const float MAX_SPEED = 2f;
     private const float SPEED_INCREASE = 0.02f;
     private const float SPEED_DEBUFF = 0.2f;
 
@@ -20,7 +21,7 @@ public class SpacemanMovement : MonoBehaviour
     private Vector3 rotation;
 
     // increases when collision occurs
-    public float speedMultiplier;
+    private float speedMultiplier;
 
     private Animator animationCmpnt;
 
@@ -95,6 +96,7 @@ public class SpacemanMovement : MonoBehaviour
 
     // updates velocity with speed multiplier
     void UpdateSpeed() {
+        speedMultiplier = speedMultiplier > MAX_SPEED ?  MAX_SPEED : speedMultiplier;
         rb.velocity = new Vector3(xVelocity * speedMultiplier, yVelocity * speedMultiplier, 0f);
     }
 
