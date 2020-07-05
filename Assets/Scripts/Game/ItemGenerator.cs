@@ -17,9 +17,9 @@ public class ItemGenerator : MonoBehaviour
 
     private const float CHIP_DISTANCE = 50f;
 
-    private const float INITIAL_ASTEROID_PROB = 0.05f;
-    private const float MAX_ASTEROID_PROB = 0.5f;
-    private const float ASTEROID_PROB_INCREASE = 0.05f;
+    private const float INITIAL_ASTEROID_PROB = 0f;
+    private const float MAX_ASTEROID_PROB = 1f;
+    private const float ASTEROID_PROB_INCREASE = 0.1f;
 
     // width of half the screen in units
     private float width;
