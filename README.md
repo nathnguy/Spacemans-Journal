@@ -1,6 +1,6 @@
 # Spaceman's Journal: a Story of Isolation
 
-![icon](assets/sprites/icon.png)
+![icon](Assets/Sprites/icon.png)
 
 Spaceman's Journal is an endless runner that takes place in a distant future when humanity must abandon Earth.
 
